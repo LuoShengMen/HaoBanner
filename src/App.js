@@ -22,14 +22,16 @@ class App extends Component {
     return (
       <div className="App">
           <Slider
+              width={700}
+              height={400}
               imgData={IMAGE_DATA}
               dirdection={'left'} // 方向
               delay={3} //动画时间
-              speed={4} // 动画数独
+              speed={1} // 动画数独
               pause={true} //是否包含暂停
               autoPlay={true} //自动播放
-              fadein={true} // 是否淡入淡出， 只有在无缝播放时有效
-              seamless={false} // 是否无缝播放
+              fadein={true} // 是否淡入淡出， 只有在无缝播放时有效 默认切换播放
+              seamless={false} // 是否无缝播放 默认无缝播放
           />
       </div>
     );
