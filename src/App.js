@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './index.css';
 import Slider from './Slider/Slider';
 
 const IMAGE_DATA = [
@@ -23,11 +23,13 @@ class App extends Component {
       <div className="App">
           <Slider
               imgData={IMAGE_DATA}
-              dirdection={'left'}
-              delay={2}
-              speed={4}
-              pause={true}
-              autoPlay={true}
+              dirdection={'left'} // 方向
+              delay={3} //动画时间
+              speed={4} // 动画数独
+              pause={true} //是否包含暂停
+              autoPlay={true} //自动播放
+              fadein={true} // 是否淡入淡出， 只有在无缝播放时有效
+              seamless={false} // 是否无缝播放
           />
       </div>
     );
