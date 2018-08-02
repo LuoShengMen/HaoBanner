@@ -31,7 +31,7 @@ class App extends Component {
               pause={true} //是否包含暂停
               autoPlay={true} //自动播放
               fadein={true} // 是否淡入淡出， 只有在无缝播放时有效 默认切换播放
-              seamless={false} // 是否无缝播放 默认无缝播放
+              seamless={true} // 是否无缝播放 默认无缝播放
           />
       </div>
     );
