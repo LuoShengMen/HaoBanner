@@ -25,7 +25,7 @@ class App extends Component {
               width={700}
               height={400}
               imgData={IMAGE_DATA}
-              dirdection={'left'} // 方向
+              dirdection={'vertical'} // 动画方向垂直vertical，水平horizontal
               delay={3} //动画时间
               speed={1} // 动画数独
               pause={true} //是否包含暂停
