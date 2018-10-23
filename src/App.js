@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import './index.css';
+// import { SmallButton } from 'smallbutton';
+import { HBanner } from 'hbanner';
 import Slider from './Slider/Slider';
 
 const IMAGE_DATA = [
@@ -22,6 +24,9 @@ class App extends Component {
   render() {
     return (
         <div className="App">
+          <HBanner
+              imgData={IMAGE_DATA}
+          />
           <Slider
               width={700} //宽度
               height={400} //高度
