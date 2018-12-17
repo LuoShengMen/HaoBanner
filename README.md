@@ -18,4 +18,4 @@
  Size  | 尺寸 | number | 20
  value  | 评分值 | number | 0
  item  | 评分图形 | string | ☆
- onChange  | 评分change事件 | function |
+ onChange  | 评分回调函数 | function |
