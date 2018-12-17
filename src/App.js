@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import './index.css';
 // import { SmallButton } from 'smallbutton';
 import { HBanner } from 'hbanner';
+import { HRate } from 'hrate';
 import Slider from './Slider/Slider';
+import Rate from './HRate/index';
 
 const IMAGE_DATA = [
   {
@@ -20,27 +22,44 @@ const IMAGE_DATA = [
 ];
 
 class App extends Component {
+  state = {
+    value: 0
+  }
 
+  changeRate = (e) => {
+    this.setState({
+      value: e
+    })
+  }
   render() {
     return (
         <div className="App">
-          <HBanner
-              imgData={IMAGE_DATA}
-          />
-          <Slider
-              width={700} //宽度
-              height={400} //高度
-              imgData={IMAGE_DATA} //数据
-              dirdection={'vertical'} // 动画方向垂直vertical，水平horizontal待完成
-              delay={3} //动画时间  默认3秒
-              speed={1} // 动画速度 默认1秒
-              pause={true} //是否包含暂停
-              autoPlay={true} //自动播放 默认自动播放
-              fadein={true} // 是否淡入淡出， 只有在无缝播放时有效 默认切换播放
-              seamless={true} // 是否无缝播放 默认无缝播放
-              arrows={true} // 是否包含箭头 默认显示
-              dots={true} // 是否包含dot 默认现实
-          />
+          {/*<HBanner*/}
+              {/*imgData={IMAGE_DATA}*/}
+          {/*/>*/}
+          <div>
+            <HRate value={this.state.value} size={30}/>
+          </div>
+          <div>
+            <HRate value={this.state.value} size={30} item='R'/>
+          </div>
+          <div>
+            <HRate value={this.state.value} size={30} item='A'/>
+          </div>
+          {/*<Slider*/}
+              {/*width={700} //宽度*/}
+              {/*height={400} //高度*/}
+              {/*imgData={IMAGE_DATA} //数据*/}
+              {/*dirdection={'vertical'} // 动画方向垂直vertical，水平horizontal待完成*/}
+              {/*delay={3} //动画时间  默认3秒*/}
+              {/*speed={1} // 动画速度 默认1秒*/}
+              {/*pause={true} //是否包含暂停*/}
+              {/*autoPlay={true} //自动播放 默认自动播放*/}
+              {/*fadein={true} // 是否淡入淡出， 只有在无缝播放时有效 默认切换播放*/}
+              {/*seamless={true} // 是否无缝播放 默认无缝播放*/}
+              {/*arrows={true} // 是否包含箭头 默认显示*/}
+              {/*dots={true} // 是否包含dot 默认现实*/}
+          {/*/>*/}
         </div>
     );
   }
